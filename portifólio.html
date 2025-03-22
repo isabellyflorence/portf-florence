@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Florence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee+Shade&family=Cinzel+Decorative:wght@400;700;900&family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Adicionando o CSS da AOS -->
+</head>
+<body>
+        <!-- Cabeçalho -->
+        <header>
+          <h1>Meu Portfólio</h1>
+          <p><strong>Desenvolvedora Front-End & Designer</strong></p>
+        </header>
+      
+        <!-- Navbar -->
+        <nav>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <!-- Separação simples entre as seções -->
+        <hr class="divider">
+        <!-- Seção Sobre -->
+        <section id="sobre-mim">
+            <div class="sobre-container">
+                <div class="sobre-imagem">
+                    <img src="minha-foto.jpg" alt="Minha foto">
+                </div>
+                <div class="sobre-texto">
+                    <h3>Olá, eu sou Isabelly!</h3>
+                    <p>Sou desenvolvedora apaixonada por tecnologia, com foco em criação de soluções inovadoras. Tenho experiência em diversas tecnologias como HTML, CSS, JavaScript e estou sempre em busca de aprender mais e evoluir como profissional.</p>
+                    <p>Adoro criar experiências digitais que sejam não apenas funcionais, mas também visuais e dinâmicas. Meus projetos refletem essa paixão por design e tecnologia.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Projetos -->
+        <section id="projetos">
+            <h2 data-aos="fade-up">Projetos</h2>
+            <div class="galeria">
+                <div class="projeto" data-aos="fade-up" data-aos-delay="100" onclick="openModal('Projeto 1', 'Descrição detalhada do projeto 1.')">
+                    <img src="img/projeto1.jpg" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição curta</p>
+                </div>
+                <div class="projeto" data-aos="fade-up" data-aos-delay="200" onclick="openModal('Projeto 2', 'Descrição detalhada do projeto 2.')">
+                    <img src="img/projeto2.jpg" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição curta</p>
+                </div>
+                <div class="projeto" data-aos="fade-up" data-aos-delay="300" onclick="openModal('Projeto 3', 'Descrição detalhada do projeto 3.')">
+                    <img src="img/projeto3.jpg" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição curta</p>
+                </div>
+                <div class="projeto" data-aos="fade-up" data-aos-delay="300" onclick="openModal('Projeto 3', 'Descrição detalhada do projeto 3.')">
+                    <img src="img/projeto4.jpg" alt="Projeto 4">
+                    <h3>Projeto 4</h3>
+                    <p>Descrição curta</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal (Popup de Detalhes) -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+        
+      
+        <!-- Formulário de Contato -->
+        <section id="contato">
+          <h2>Entre em Contato</h2>
+          <form action="https://formsubmit.co/your-email" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+      
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+      
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      
+        <!-- Rodapé -->
+        <footer>
+          <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+          <div class="redes-sociais">
+            <a href="https://github.com/isabellyflorence" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/isabelly-florence-9090641a3/" target="_blank">LinkedIn</a>
+          </div>
+        </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();  // Inicializando a biblioteca AOS
+    </script>
+        
+    
+</body>
+</html>

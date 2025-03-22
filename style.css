@@ -1,0 +1,303 @@
+/* Paleta de Cores */
+:root {
+    --cor-principal: #d87b8c;
+    --cor-secundaria: #d87b8c;
+    --cor-clara: #fafafa;
+    --cor-escura: #333;
+}
+
+/* Reset Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+}
+
+/* Cabeçalho */
+header {
+    background: url('header.jpg') no-repeat center center;
+    background-size: cover; 
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 5em;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.637);
+}
+
+header p {
+    font-size: 1.2em;
+    font-family: "Aboreto", system-ui;
+    font-weight: lighter;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.658);
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 0;
+    background-color: #d87b8c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.486);
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+   
+}
+
+nav ul li a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Cinzel Decorative", serif;
+    transition: color 0.3s ease-in-out;
+    color:#ffffff;
+}
+
+nav ul li a:hover {
+    color: #9e473f;
+}
+
+.divider {
+    border: none;         /* Remove a borda padrão */
+    height: 60px;          /* Define a altura da linha */
+    background: #e7faf3;
+    margin: 50px 0;       /* Espaçamento acima e abaixo da linha */
+    margin-top: 0; /* Remove a margem superior */
+    padding-top: 0; /* Remove o padding superior */
+}
+  
+/* Seção Sobre Mim */
+#sobre-mim {
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.sobre-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sobre-imagem img {
+    width: 200px; /* Mantendo o tamanho desejado */
+    height: 200px; /* Mantendo o formato quadrado */
+    border-radius: 50%; /* Mantendo o efeito circular */
+    object-fit: cover; /* Evita distorção da imagem */
+    box-shadow: 0 0 20px rgba(15, 15, 15, 0.1); /* Mantendo a sombra */
+    flex-shrink: 0; /* Evita que a imagem aumente no flexbox */
+}
+.sobre-texto {
+    max-width: 600px;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    font-family: "El Messiri", sans-serif;
+    flex: 1; /* Faz o texto ocupar o espaço disponível */
+}
+
+/* Em telas menores, a imagem vai para cima ou abaixo do texto */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* Empilha os elementos */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+}
+
+/* Seção Projetos */
+#projetos {
+    text-align: center;
+    padding: 50px 10%;
+}
+
+#projetos h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.projeto {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto:hover img {
+    transform: scale(1.1);
+}
+
+.projeto h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+.projeto p {
+    color: #7f8c8d;
+}
+
+/* Formulário de Contato */
+#contato {
+    padding: 50px 10%;
+    background-color: #e7faf3;
+    text-align: center;
+    font-family: "Aboreto", system-ui;
+}
+
+form {
+    background-color: #e7faf3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.568);
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #b36799;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+    font-family: "Aboreto", system-ui;
+}
+
+form button:hover {
+    background-color: #c795ac;
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    color: white;
+    font-family: "Aboreto", system-ui;
+}
+
+.redes-sociais a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.redes-sociais a:hover {
+    color: #702e28;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .galeria {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projetos, #contato {
+        padding: 30px 10%;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
